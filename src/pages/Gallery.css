@@ -1,0 +1,112 @@
+.gallery-outbox {
+  width: 100vw;
+  overflow-x: hidden;
+
+}
+
+.scroll-img {
+  overflow: hidden;
+  padding: 40px;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content; /* 안에 있는 컨텐츠 만큼 커져라 */
+  gap: 30px;
+  animation: leftscroll 40s linear infinite;
+  -webkit-animation: leftscroll 40s linear infinite;
+  animation-play-state: running; /* 이벤트가 발생시 애니메이션 제어 가능 */ 
+}
+
+.scroll-img:hover .scroll-track {
+  animation-play-state: paused;
+}
+
+.scroll-inbox {
+  width: 300px;
+  text-align: center;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.scroll-inbox:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.scroll-inbox img {
+  width: 100%;
+  height: 300px;
+  border-radius:  10px;
+  -webkit-border-radius:  10px;
+  -moz-border-radius:  10px;
+  -ms-border-radius:  10px;
+  -o-border-radius:  10px;
+  object-fit: cover;
+}
+
+
+@keyframes leftscroll {
+  0% {
+    transform: translateX(0)  ;
+    -webkit-transform: translateX(0)  ;
+    -moz-transform: translateX(0)  ;
+    -ms-transform: translateX(0)  ;
+    -o-transform: translateX(0)  ;
+  }
+  100% {
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+
+
+}
+
+.fade-section {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.img-box {
+  width: 50%;
+}
+
+.img-box img {
+  width: 80%;
+  height: 80%;
+  margin: 50px auto;
+  object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.group-img {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 100px;
+}
+
+.group-img-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

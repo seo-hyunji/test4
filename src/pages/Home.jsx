@@ -47,8 +47,9 @@ const Home = () => {
         <div
         key={index}
         className={`img ${index === current ? 'active' : ''}`}
-        style={{backgroundImage: `url(/images/${img.src})`}}
-        //git에 올릴 때 style={{backgroundImage: `url(${process.env.Public_URL}/images/${img.src})`}}
+        // style={{backgroundImage: `url(/images/${img.src})`}}
+        //git에 올릴 때  
+        style={{backgroundImage: `url(${process.env.Public_URL}/images/${img.src})`}}
         >
           <h1 className={`title ${index === current ? 'on' : ''}`}>
             {img.title}

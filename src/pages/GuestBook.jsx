@@ -9,8 +9,8 @@ export const GuestBook = () => {
 
   const showMessage = async () =>{
     try {
-      const res = await axios.get("https://home-706931074242.us-central1.run.app/guest");
-      // const res = await axios.get("https://guest3-889049612240.us-central1.run.app/guest");
+      // const res = await axios.get("https://home-706931074242.us-central1.run.app/guest");
+      const res = await axios.get("https://guest3-889049612240.us-central1.run.app/guest");
       setApiMessage(res.data);
     } catch (error) {
       console.error("데이터 불러오기 실패",error);
@@ -24,8 +24,8 @@ export const GuestBook = () => {
   const submitPost = async (e) =>{
     e.preventDefault(); // 자동 이벤트 방지
     try {
-      await axios.post("https://home-706931074242.us-central1.run.app/guest",postData);
-      // await axios.post("https://guest3-889049612240.us-central1.run.app/guest",postData);
+      // await axios.post("https://home-706931074242.us-central1.run.app/guest",postData);
+      await axios.post("https://guest3-889049612240.us-central1.run.app/guest",postData);
       setPostData({name: "", message: ""});
       showMessage();
     } catch (error) {
